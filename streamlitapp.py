@@ -1,22 +1,8 @@
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.feature_selection import SelectKBest
-from sklearn.model_selection import GridSearchCV
-from sklearn.pipeline import Pipeline
-from sklearn.compose import ColumnTransformer
-from sklearn.impute import SimpleImputer
-from sklearn.compose import make_column_selector as selector
 import streamlit as st
-import random
 from sklearn.preprocessing import MinMaxScaler
-from sklearn.linear_model import LogisticRegression
-from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import accuracy_score, precision_score
 from sklearn.impute import KNNImputer
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.feature_selection import SelectKBest, chi2
 import joblib
 def preprocess_input(data):
     data["job"] = data["job"].replace(
